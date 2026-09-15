@@ -1,20 +1,25 @@
-backend:
-  name: netlify-identity
-  site_domain: historiasdeamoryconexiones-com.netlify.app
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Content Manager</title>
 
-site_url: https://historiasdeamoryconexiones-com.vercel.app
-display_url: https://historiasdeamoryconexiones-com.vercel.app
+    <!-- Decap CMS -->
+    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 
-media_folder: "assets/images"
-public_folder: "/assets/images"
+    <!-- Netlify Identity Widget -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
-collections:
-  - name: "blog"
-    label: "Blog"
-    folder: "content/blog"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Body", name: "body", widget: "markdown"}
+    <!-- Netlify API Connect -->
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.init({
+          APIUrl: "https://historiasdeamoryconexiones-com.netlify.app/.netlify/identity"
+        });
+      }
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
