@@ -1,3 +1,10 @@
+backend:
+  name: git-gateway
+  branch: main
+  identity_url: "https://historiasdeamoryconexiones-com.netlify.app/.netlify/identity"
+  gateway_url: "https://historiasdeamoryconexiones-com.netlify.app/.netlify/git"
+
+
 <!DOCTYPE html>
 <html>
   <head>
