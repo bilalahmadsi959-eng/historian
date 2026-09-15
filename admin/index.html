@@ -4,20 +4,21 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Content Manager</title>
-  <!-- Netlify Identity Widget -->
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
-  <!-- Decap CMS Script -->
-  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
-
   <script>
-    // Force Netlify Identity API URL to connect to Netlify backend
+    // Force Identity URL globally before CMS script loads
+    window.NETLIFY_SITE_URL = "https://historiasdeamoryconexiones-com.netlify.app";
+    
     if (window.netlifyIdentity) {
       window.netlifyIdentity.init({
         APIUrl: "https://historiasdeamoryconexiones-com.netlify.app/.netlify/identity"
       });
     }
   </script>
+
+  <!-- Decap CMS Script -->
+  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 </body>
 </html>
