@@ -1,32 +1,26 @@
 backend:
   name: git-gateway
   branch: main
-  identity_url: "https://historiasdeamoryconexiones-com.netlify.app/.netlify/identity"
-  gateway_url: "https://historiasdeamoryconexiones-com.netlify.app/.netlify/git"
 
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
 
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Content Manager</title>
+collections:
+  - name: "stories"
+    label: "Stories"
+    folder: "content/stories"
+    create: true
+    slug: "{{slug}}"
 
-    <!-- Decap CMS -->
-    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+    fields:
+      - label: "Title"
+        name: "title"
+        widget: "string"
 
-    <!-- Netlify Identity Widget -->
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+      - label: "Date"
+        name: "date"
+        widget: "datetime"
 
-    <!-- Netlify API Connect -->
-    <script>
-      if (window.netlifyIdentity) {
-        window.netlifyIdentity.init({
-          APIUrl: "https://historiasdeamoryconexiones-com.netlify.app/.netlify/identity"
-        });
-      }
-    </script>
-  </head>
-  <body>
-  </body>
-</html>
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
