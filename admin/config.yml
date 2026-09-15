@@ -1,14 +1,21 @@
 backend:
   name: git-gateway
+  site_domain: historiasdeamoryconexiones-com.netlify.app
   branch: main
 
+site_url: https://historiasdeamoryconexiones-com.vercel.app
+display_url: https://historiasdeamoryconexiones-com.vercel.app
+
+media_folder: "assets/images"
+public_folder: "/assets/images"
+
 collections:
-  - name: "articles"
-    label: "Articles"
-    folder: "posts"
+  - name: "blog"
+    label: "Blog"
+    folder: "content/blog"
     create: true
-    slug: "{{slug}}"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Story Body", name: "body", widget: "markdown"}
+      - {label: "Body", name: "body", widget: "markdown"}
