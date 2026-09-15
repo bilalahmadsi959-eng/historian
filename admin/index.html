@@ -1,28 +1,6 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Content Manager</title>
-    
-    <!-- Decap CMS Script -->
-    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
-
-    <!-- Netlify Identity Widget -->
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-
-    <!-- Explicit backend config script -->
-    <script>
-      if (window.netlifyIdentity) {
-        window.netlifyIdentity.init({
-          APIUrl: "https://historiasdeamoryconexiones-com.netlify.app/.netlify/identity"
-        });
-      }
-    </script>
-  </head>
-  <body>
-  </body>
-</html>
+<html lang="es">
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -32,7 +10,6 @@
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   <script>
     if (window.netlifyIdentity) {
-      window.netlifyIdentity.setNetlifyIdentityUrl("https://historiasdeamoryconexiones-com.netlify.app");
       window.netlifyIdentity.on("init", user => {
         if (!user) {
           window.netlifyIdentity.on("login", () => {
@@ -92,13 +69,8 @@
       --soft-shadow: 0 15px 40px rgba(0,0,0,.28);
     }
 
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
 
     body {
       margin: 0;
@@ -133,9 +105,7 @@
       border-bottom: 1px solid var(--border);
     }
 
-    body.dark header {
-      background: rgba(18,11,14,.86);
-    }
+    body.dark header { background: rgba(18,11,14,.86); }
 
     .nav {
       max-width: 1120px;
@@ -162,10 +132,7 @@
       color: transparent;
     }
 
-    .nav-actions {
-      display: flex;
-      gap: 8px;
-    }
+    .nav-actions { display: flex; gap: 8px; }
 
     .icon-btn {
       width: 40px;
@@ -179,13 +146,8 @@
       transition: .25s;
     }
 
-    .icon-btn:hover {
-      transform: translateY(-2px);
-    }
-
-    main {
-      width: 100%;
-    }
+    .icon-btn:hover { transform: translateY(-2px); }
+    main { width: 100%; }
 
     .hero {
       max-width: 1000px;
@@ -262,11 +224,7 @@
       content: "";
       position: absolute;
       inset: 0;
-      background: linear-gradient(
-        180deg,
-        transparent 45%,
-        rgba(36,24,27,.20)
-      );
+      background: linear-gradient(180deg, transparent 45%, rgba(36,24,27,.20));
       pointer-events: none;
     }
 
@@ -336,19 +294,7 @@
     }
 
     .wide-ad-scroll::-webkit-scrollbar { display: none; }
-
-    .native-ad {
-      width: 100%;
-      max-width: 680px;
-      min-height: 120px;
-    }
-
-    .script-ad {
-      width: 100%;
-      max-width: 680px;
-      min-height: 120px;
-    }
-
+    .native-ad, .script-ad { width: 100%; max-width: 680px; min-height: 120px; }
     .desktop-skyscraper { min-height: 660px; }
 
     .article-shell {
@@ -366,10 +312,7 @@
       overflow: hidden;
     }
 
-    .story-intro {
-      font-size: 21px;
-      line-height: 1.85;
-    }
+    .story-intro { font-size: 21px; line-height: 1.85; }
 
     article p {
       margin: 0 0 25px;
@@ -403,11 +346,7 @@
       box-shadow: 0 10px 30px rgba(80,25,40,.04);
     }
 
-    .quote-space p {
-      margin: 0;
-      font-style: italic;
-      font-size: 20px;
-    }
+    .quote-space p { margin: 0; font-style: italic; font-size: 20px; }
 
     @media (max-width: 760px) {
       .hero { padding: 52px 16px 25px; }
@@ -434,7 +373,6 @@
 </head>
 
 <body>
-
 <div id="progress"></div>
 
 <header>
@@ -897,6 +835,5 @@
 </article>
 </div>
 </main>
-
 </body>
 </html>
