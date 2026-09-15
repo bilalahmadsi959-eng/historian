@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/.netlify/:path*",
+      "destination": "https://historiasdeamoryconexiones-com.netlify.app/.netlify/:path*"
+    }
+  ]
+}
