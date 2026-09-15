@@ -4,47 +4,12 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Content Manager</title>
-  
+
   <!-- Netlify Identity Widget -->
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
-  <script>
-    const NETLIFY_URL = "https://historiasdeamoryconexiones-com.netlify.app";
-
-    // 1. Force Netlify Identity API
-    if (window.netlifyIdentity) {
-      window.netlifyIdentity.on("init", user => {
-        if (!user) {
-          window.netlifyIdentity.on("login", () => {
-            document.location.reload();
-          });
-        }
-      });
-      window.netlifyIdentity.init({
-        APIUrl: NETLIFY_URL + "/.netlify/identity"
-      });
-    }
-
-    // 2. Override manual CMS initialization to block Vercel identity fetching
-    window.CMS_MANUAL_INIT = true;
-  </script>
-
   <!-- Decap CMS Script -->
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
-
-  <script>
-    // Manual CMS Init with forced backend URLs
-    CMS.init({
-      config: {
-        backend: {
-          name: 'git-gateway',
-          branch: 'main',
-          identity_url: NETLIFY_URL + '/.netlify/identity',
-          gateway_url: NETLIFY_URL + '/.netlify/git/github'
-        }
-      }
-    });
-  </script>
 </body>
 </html>
