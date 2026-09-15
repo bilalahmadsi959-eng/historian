@@ -1,20 +1,21 @@
 backend:
-  name: git-gateway
-  branch: main
-  identity_url: "https://historiasdeamoryconexiones-com.netlify.app/.netlify/identity"
-  gateway_url: "https://historiasdeamoryconexiones-com.netlify.app/.netlify/git/github"
+name: git-gateway
+branch: main
+identity_url: "https://historiasdeamoryconexiones-com.netlify.app/.netlify/identity"
+gateway_url: "https://historiasdeamoryconexiones-com.netlify.app/.netlify/git/github"
 
 media_folder: "public/images"
 public_folder: "/images"
 
 collections:
-  - name: "blog"
-    label: "Historias"
-    folder: "content/posts"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Featured Image", name: "image", widget: "image"}
-      - {label: "Body", name: "body", widget: "markdown"}
+
+- name: "blog"
+  label: "Historias"
+  folder: "content/posts"
+  create: true
+  slug: "{{slug}}"
+  fields:
+  - {label: "Title", name: "title", widget: "string"}
+  - {label: "Publish Date", name: "date", widget: "datetime"}
+  - {label: "Featured Image", name: "image", widget: "image"}
+  - {label: "Body", name: "body", widget: "markdown"}
