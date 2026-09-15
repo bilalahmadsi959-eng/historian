@@ -4,14 +4,24 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Content Manager</title>
+
+  <!-- Netlify Identity Widget -->
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
   <script>
-    // Force Identity URL globally before CMS script loads
+    // Explicitly target Netlify Identity API on Netlify domain
     window.NETLIFY_SITE_URL = "https://historiasdeamoryconexiones-com.netlify.app";
-    
+
     if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.reload();
+          });
+        }
+      });
+
       window.netlifyIdentity.init({
         APIUrl: "https://historiasdeamoryconexiones-com.netlify.app/.netlify/identity"
       });
