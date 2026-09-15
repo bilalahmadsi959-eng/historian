@@ -1,8 +1,6 @@
 backend:
   name: git-gateway
   branch: main
-  identity_url: "https://historiasdeamoryconexiones-com.netlify.app/.netlify/identity"
-  gateway_url: "https://historiasdeamoryconexiones-com.netlify.app/.netlify/git/github"
 
 media_folder: "public/images"
 public_folder: "/images"
