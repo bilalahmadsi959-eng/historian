@@ -1,7 +1,6 @@
 backend:
   name: git-gateway
   branch: main
-  site_id: historiasdeamoryconexiones-com.netlify.app
   identity_url: "https://historiasdeamoryconexiones-com.netlify.app/.netlify/identity"
   gateway_url: "https://historiasdeamoryconexiones-com.netlify.app/.netlify/git/github"
 
