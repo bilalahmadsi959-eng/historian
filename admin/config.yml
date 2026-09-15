@@ -1,8 +1,8 @@
 backend:
   name: github
-  repo: APNA_GITHUB_USERNAME/APNA_REPO_NAME # Yahan apna sahi GitHub Username/RepoName likhein
+  repo: APNA_GITHUB_USERNAME/APNA_REPO_NAME # Yahan actual GitHub Repo Username/RepoName dalein
   branch: main
-  base_url: "https://decap-bridge.vercel.app"
+  base_url: "https://decap-cms-oauth-provider.vercel.app"
   auth_endpoint: "/api/auth"
 
 media_folder: "public/images"
