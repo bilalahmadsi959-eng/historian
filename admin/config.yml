@@ -1,26 +1,19 @@
 backend:
   name: git-gateway
   branch: main
+  site_id: historiasdeamoryconexiones-com.netlify.app
 
-media_folder: "images/uploads"
-public_folder: "/images/uploads"
+media_folder: "public/images"
+public_folder: "/images"
 
 collections:
-  - name: "stories"
-    label: "Stories"
-    folder: "content/stories"
+  - name: "blog"
+    label: "Historias"
+    folder: "content/posts"
     create: true
     slug: "{{slug}}"
-
     fields:
-      - label: "Title"
-        name: "title"
-        widget: "string"
-
-      - label: "Date"
-        name: "date"
-        widget: "datetime"
-
-      - label: "Body"
-        name: "body"
-        widget: "markdown"
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Featured Image", name: "image", widget: "image"}
+      - {label: "Body", name: "body", widget: "markdown"}
