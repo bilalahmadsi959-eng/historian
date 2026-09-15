@@ -1,6 +1,30 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
+<head> <!-- Netlify Identity Redirect Fix for External Hosting (Vercel) -->
+<script>
+  if (window.location.hash.includes('invite_token') || window.location.hash.includes('recovery_token')) {
+    // Identity tokens handling for external site
+  }
+</script>
+
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+<script>
+  if (window.netlifyIdentity) {
+    // Force widget to connect directly to Netlify instance
+    window.netlifyIdentity.init({
+      APIUrl: "https://historiasdeamoryconexiones-com.netlify.app/.netlify/identity"
+    });
+
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
