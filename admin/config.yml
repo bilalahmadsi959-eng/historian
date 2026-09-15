@@ -1,7 +1,6 @@
 backend:
-  name: git-gateway
+  name: netlify-identity
   site_domain: historiasdeamoryconexiones-com.netlify.app
-  branch: main
 
 site_url: https://historiasdeamoryconexiones-com.vercel.app
 display_url: https://historiasdeamoryconexiones-com.vercel.app
