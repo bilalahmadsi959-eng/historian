@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: APNA_GITHUB_USERNAME/APNA_REPO_NAME # Yahan apna GitHub Username aur Repository name likhein
   branch: main
 
 media_folder: "public/images"
