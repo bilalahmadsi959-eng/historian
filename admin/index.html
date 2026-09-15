@@ -1,32 +1,9 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Content Manager</title>
-
-    <!-- Decap CMS -->
-    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
-
-    <!-- Netlify Identity Widget -->
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-
-    <script>
-      // Force Netlify Identity to fetch settings from your Netlify domain instead of Vercel!
-      if (window.netlifyIdentity) {
-        window.netlifyIdentity.on("init", user => {
-          if (!user) {
-            window.netlifyIdentity.on("login", () => {
-              document.location.href = "/admin/";
-            });
-          }
-        });
-      }
-    </script>
-  </head>
-  <body>
-  </body>
-</html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Content Manager</title>
 
   <meta name="description" content="Una historia sobre mensajes, dudas, inseguridades y aprender que el silencio de alguien puede significar muchas cosas.">
   <meta name="theme-color" content="#7f1d3d">
@@ -43,6 +20,21 @@
   <meta name="twitter:title" content="Le escribí “¿estás bien?” y después me arrepentí de mirar el teléfono cada cinco minutos">
   <meta name="twitter:description" content="Una historia sobre mensajes, dudas e inseguridades cuando alguien tarda en responder.">
   <meta name="twitter:image" content="/images/valeria-story.jpg">
+
+  <!-- Decap CMS Script -->
+  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+
+  <!-- Netlify Identity Widget Script -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+  <script>
+    // Initialize Netlify Identity with absolute Netlify API URL to prevent Vercel 404
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.init({
+        APIUrl: "https://historiasdeamoryconexiones-com.netlify.app/.netlify/identity"
+      });
+    }
+  </script>
 
   <style>
     :root {
@@ -609,7 +601,7 @@
 <p>Eso lo sabía.</p>
 <p>Sino porque, después de tantos días hablando, su silencio empezaba a sentirse diferente.</p>
 <p>Me acosté.</p>
-<p>Intenté dormir.</p>
+<p>Intentó dormir.</p>
 <p>No pude.</p>
 <p>A las 00:17 miré el teléfono.</p>
 <p>Nada.</p>
