@@ -1,7 +1,9 @@
 backend:
   name: github
-  repo: APNA_GITHUB_USERNAME/APNA_REPO_NAME # Yahan apna GitHub Username aur Repository name likhein
+  repo: APNA_GITHUB_USERNAME/APNA_REPO_NAME # Yahan actual GitHub Username/Repo dalein (e.g., user/historias)
   branch: main
+  base_url: "https://decap-cms-oauth-provider.vercel.app" # Free Auth Proxy
+  auth_endpoint: "/auth"
 
 media_folder: "public/images"
 public_folder: "/images"
